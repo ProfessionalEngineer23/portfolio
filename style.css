@@ -392,3 +392,22 @@ button:hover {
     box-shadow: 0 3px 10px rgba(255, 255, 255, 0.05);
   }
 }
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #88c9ff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.theme-toggle:hover {
+  background-color: #6ba8d6;
+}
+
