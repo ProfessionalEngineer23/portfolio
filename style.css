@@ -1,36 +1,34 @@
-/* Base styles (light mode defaults) */
-
 body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: #ffffff;
-  color: #333333;
 }
 
 /* Navigation Bar */
 
 #home {
-  background-color: #506a88;
+  background-color:  #506a88;
   padding-bottom: 1cm;
-  margin-left: -1cm;
-  margin-right: -1cm;
-  margin-top: -1cm;
+  margin-left:-1cm;
+  margin-right:-1cm;
+  margin-top:-1cm;
   padding-top: 2cm;
   padding-bottom: 2cm;
   height: 5mm;
-}
+ }
 
 .topmenu {
-  color: #dddddd;
+  color: lab(87.35% -9.7 -19.36);
   margin: 10px;
   padding: 20px;
   font-size: 20px;
-  text-decoration: none;
+  text-decoration:none;
 }
 
 .topmenu:hover {
   color: white;
   font-weight: bolder;
   text-decoration: underline;
+
+  /* Add the styles here */
 }
 
 .topdiv {
@@ -42,7 +40,8 @@ body {
   font-size: 30px;
   float: left;
   padding-left: 2cm;
-  background-color: #506a88;
+  background-color:#506a88;
+  /* Add the styles here */
 }
 
 .profile_name .contact_info {
@@ -54,22 +53,27 @@ body {
 }
 
 .contact_info img {
-  width: 25px;
+  width:25px;
   margin-right: 10px;
-  float: left;
+  float:left;
 }
 
 /* Titles */
 
 h2 {
+  text-align: justify;
   font-size: 50px;
   text-align: center;
   float: left;
-  color: #4a4a4a;
-  margin: 30px 0 0 60px;
+  color: #7c7c7c;
+  margin: 30px;
+  margin-left: 60px;
+  margin-top: 40px;
+  margin-bottom: 0px;
 }
 
 .introduction {
+  text-align: justify;
   font-size: 30px;
   text-align: center;
   float: left;
@@ -117,7 +121,7 @@ h2 {
 .all_skills {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: wrap;
 }
 
 .skill {
@@ -127,7 +131,7 @@ h2 {
   text-align: center;
   margin: 50px;
   padding: 10px;
-  width: 200px;
+  width: 2in;
   font-size: 20px;
   box-shadow: 0 3px 10px gray;
 }
@@ -143,7 +147,7 @@ h2 {
   margin-block-start: 8px;
   margin-block-end: 5px;
   font-weight: bold;
-}
+} 
 
 .skills p {
   align-items: center;
@@ -151,7 +155,7 @@ h2 {
   color: gray;
   margin-block-start: 5px;
   margin-block-end: 5px;
-}
+} 
 
 .flex_center {
   display: flex;
@@ -194,7 +198,7 @@ h2 {
   align-items: center;
   margin-left: 1in;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: wrap;
   padding: 20px;
 }
 
@@ -202,29 +206,30 @@ h2 {
   font-style: italic;
   text-align: left;
   width: 21.875rem;
+  padding: 1rem;
   background-color: #fff;
   border-radius: 11px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 10px var(--primary-shadow);
   padding: 20px;
   margin: 10px;
-  border: 1px solid gray;
+  border:1px solid gray;
   font-size: 18px;
-  height: 150px;
+  height:150px
 }
 
 .recommendation span {
-  color: #6ba8d6;
+  color: #cacaca;
   font-size: 20px;
   font-family: 'Times New Roman', Times, serif;
 }
 
 /* Scroll to Top Button */
 
-.iconbutton {
+.iconbutton{
   width: 48px;
   height: 48px;
   border-radius: 100%;
-  background-color: #6ba8d6;
+  background-color: #b4faff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -237,14 +242,15 @@ h2 {
 /* Form Pop-up */
 
 .popup {
-  width: 400px;
-  background-color: #e2ecf5;
+  width:400px;
+  background-color: #bcf0d6;
   border-radius: 3mm;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left:50%;
+  transform: translate(-50%,-50%);
   text-align: center;
   position: fixed;
+  /* padding: 30px; */
   visibility: hidden;
 }
 
@@ -259,37 +265,39 @@ h2 {
   display: block;
   border-radius: 6px;
   text-align: center;
-  margin: 50px auto;
+  margin: 50px;
   padding: 10px;
-  width: 200px;
+  width: 2in;
   font-size: 20px;
+  margin-left: 25%;
 }
 
 .popup button:hover {
   background-color: #fff;
-  border: 2px solid #6ba8d6;
-  color: #6ba8d6;
+  border: 2px solid #c0c0c0;
+  color: #999999;
+  display: block;
   font-weight: bolder;
+  text-align: center;
   cursor: pointer;
+  margin-left: 25%;
 }
 
 /* Recommendation Form */
 
-input,
-textarea {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  margin: 10px;
-  width: 100%;
+input, textarea {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+  margin: 10px;  
+  width:100%;
 }
 
 fieldset {
-  display: flex;
-  flex-direction: column;
+  display: flexbox;
   align-content: center;
-  justify-content: center;
-  padding: 25px;
-  margin-left: 50px;
-  margin-right: 50px;
+  justify-content: center;  
+  padding: 25px; 
+  margin-left: 50px; 
+  margin-right: 50px;   
   border: thin solid white;
   width: 50%;
 }
@@ -303,106 +311,18 @@ button {
   display: block;
   border-radius: 6px;
   text-align: center;
-  margin: 50px auto;
+  margin: 50px;
   padding: 10px;
-  width: 200px;
+  width: 2in;
   font-size: 20px;
 }
 
 button:hover {
-  background-color: #6ba8d6;
-  border: 1px solid #6ba8d6;
+  background-color: #a7a7a7;
+  border: 1px solid #a3a3a3;
   color: #fff;
-  cursor: pointer;
-}
-
-/* Dark Mode Class (for manual toggle only) */
-
-body.dark-mode {
-  background-color: #1e1e1e;
-  color: #dddddd;
-}
-
-body.dark-mode #home,
-body.dark-mode .profile_name {
-  background-color: #2e3b55;
-}
-
-body.dark-mode .topmenu {
-  color: #cccccc;
-}
-
-body.dark-mode .topmenu:hover {
-  color: white;
-}
-
-body.dark-mode h2 {
-  color: #dddddd;
-}
-
-body.dark-mode .recommendation {
-  background-color: #2a2a2a;
-  border: 1px solid #555555;
-  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.05);
-}
-
-body.dark-mode .recommendation span {
-  color: #88c9ff;
-}
-
-body.dark-mode .iconbutton {
-  background-color: #88c9ff;
-}
-
-body.dark-mode .popup {
-  background-color: #333a45;
-  color: #eeeeee;
-}
-
-body.dark-mode .popup button {
-  background-color: #222222;
-  border: 1px solid #88c9ff;
-  color: #88c9ff;
-}
-
-body.dark-mode .popup button:hover {
-  background-color: #88c9ff;
-  border: 1px solid #88c9ff;
-  color: #222222;
-}
-
-body.dark-mode button {
-  background-color: #222222;
-  border: 1px solid #88c9ff;
-  color: #88c9ff;
-}
-
-body.dark-mode button:hover {
-  background-color: #88c9ff;
-  border: 1px solid #88c9ff;
-  color: #222222;
-}
-
-body.dark-mode .skill {
-  background-color: #2a2a2a;
-  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.05);
-}
-
-/* Theme Toggle Button */
-.theme-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  padding: 10px 15px;
-  font-size: 16px;
-  background-color: #88c9ff;
-  color: #fff;
-  border: none;
+  display: block;
   border-radius: 6px;
+  text-align: center;
   cursor: pointer;
-  z-index: 9999;
-}
-
-.theme-toggle:hover {
-  background-color: #6ba8d6;
 }
