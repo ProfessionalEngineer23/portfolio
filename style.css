@@ -318,6 +318,7 @@ button:hover {
 
 /* Dark Mode Styles */
 
+body.dark-mode,
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #1e1e1e;
