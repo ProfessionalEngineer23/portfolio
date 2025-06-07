@@ -1,5 +1,9 @@
+/* Base styles (light mode defaults) */
+
 body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333333;
 }
 
 /* Navigation Bar */
@@ -16,7 +20,7 @@ body {
 }
 
 .topmenu {
-  color: #cccccc; /* safer color */
+  color: #dddddd;
   margin: 10px;
   padding: 20px;
   font-size: 20px;
@@ -61,7 +65,7 @@ h2 {
   font-size: 50px;
   text-align: center;
   float: left;
-  color: #7c7c7c;
+  color: #4a4a4a;
   margin: 30px 0 0 60px;
 }
 
@@ -123,7 +127,7 @@ h2 {
   text-align: center;
   margin: 50px;
   padding: 10px;
-  width: 200px; /* instead of 2in */
+  width: 200px;
   font-size: 20px;
   box-shadow: 0 3px 10px gray;
 }
@@ -200,7 +204,7 @@ h2 {
   width: 21.875rem;
   background-color: #fff;
   border-radius: 11px;
-  box-shadow: 0 3px 10px var(--primary-shadow);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin: 10px;
   border: 1px solid gray;
@@ -209,7 +213,7 @@ h2 {
 }
 
 .recommendation span {
-  color: #cacaca;
+  color: #6ba8d6;
   font-size: 20px;
   font-family: 'Times New Roman', Times, serif;
 }
@@ -220,7 +224,7 @@ h2 {
   width: 48px;
   height: 48px;
   border-radius: 100%;
-  background-color: #b4faff;
+  background-color: #6ba8d6;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -234,7 +238,7 @@ h2 {
 
 .popup {
   width: 400px;
-  background-color: #bcf0d6;
+  background-color: #e2ecf5;
   border-radius: 3mm;
   top: 50%;
   left: 50%;
@@ -255,7 +259,7 @@ h2 {
   display: block;
   border-radius: 6px;
   text-align: center;
-  margin: 50px auto; /* centered horizontally */
+  margin: 50px auto;
   padding: 10px;
   width: 200px;
   font-size: 20px;
@@ -263,15 +267,16 @@ h2 {
 
 .popup button:hover {
   background-color: #fff;
-  border: 2px solid #c0c0c0;
-  color: #999999;
+  border: 2px solid #6ba8d6;
+  color: #6ba8d6;
   font-weight: bolder;
   cursor: pointer;
 }
 
 /* Recommendation Form */
 
-input, textarea {
+input,
+textarea {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin: 10px;
   width: 100%;
@@ -279,7 +284,7 @@ input, textarea {
 
 fieldset {
   display: flex;
-  flex-direction: column; /* corrected */
+  flex-direction: column;
   align-content: center;
   justify-content: center;
   padding: 25px;
@@ -298,15 +303,92 @@ button {
   display: block;
   border-radius: 6px;
   text-align: center;
-  margin: 50px auto; /* centered horizontally */
+  margin: 50px auto;
   padding: 10px;
   width: 200px;
   font-size: 20px;
 }
 
 button:hover {
-  background-color: #a7a7a7;
-  border: 1px solid #a3a3a3;
+  background-color: #6ba8d6;
+  border: 1px solid #6ba8d6;
   color: #fff;
   cursor: pointer;
+}
+
+/* Dark Mode Styles */
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1e1e1e;
+    color: #dddddd;
+  }
+
+  #home {
+    background-color: #2e3b55;
+  }
+
+  .profile_name {
+    background-color: #2e3b55;
+  }
+
+  .topmenu {
+    color: #cccccc;
+  }
+
+  .topmenu:hover {
+    color: white;
+  }
+
+  h2 {
+    color: #dddddd;
+  }
+
+  .recommendation {
+    background-color: #2a2a2a;
+    border: 1px solid #555555;
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.05);
+  }
+
+  .recommendation span {
+    color: #88c9ff;
+  }
+
+  .iconbutton {
+    background-color: #88c9ff;
+  }
+
+  .popup {
+    background-color: #333a45;
+    color: #eeeeee;
+  }
+
+  .popup button {
+    background-color: #222222;
+    border: 1px solid #88c9ff;
+    color: #88c9ff;
+  }
+
+  .popup button:hover {
+    background-color: #88c9ff;
+    border: 1px solid #88c9ff;
+    color: #222222;
+  }
+
+  button {
+    background-color: #222222;
+    border: 1px solid #88c9ff;
+    color: #88c9ff;
+  }
+
+  button:hover {
+    background-color: #88c9ff;
+    border: 1px solid #88c9ff;
+    color: #222222;
+  }
+
+  .skill {
+    background-color: #2a2a2a;
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.05);
+  }
 }
