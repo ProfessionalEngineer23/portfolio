@@ -1,13 +1,329 @@
-/* Dark Mode Class (for manual toggle) */
+/* Base styles (light mode defaults) */
+
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* Navigation Bar */
+
+#home {
+  background-color: #506a88;
+  padding-bottom: 1cm;
+  margin-left: -1cm;
+  margin-right: -1cm;
+  margin-top: -1cm;
+  padding-top: 2cm;
+  padding-bottom: 2cm;
+  height: 5mm;
+}
+
+.topmenu {
+  color: #dddddd;
+  margin: 10px;
+  padding: 20px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.topmenu:hover {
+  color: white;
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.topdiv {
+  float: right;
+  padding-right: 1cm;
+}
+
+.profile_name {
+  font-size: 30px;
+  float: left;
+  padding-left: 2cm;
+  background-color: #506a88;
+}
+
+.profile_name .contact_info {
+  font-size: 15px;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.contact_info img {
+  width: 25px;
+  margin-right: 10px;
+  float: left;
+}
+
+/* Titles */
+
+h2 {
+  font-size: 50px;
+  text-align: center;
+  float: left;
+  color: #4a4a4a;
+  margin: 30px 0 0 60px;
+}
+
+.introduction {
+  font-size: 30px;
+  text-align: center;
+  float: left;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  animation-duration: 5s;
+  position: relative;
+}
+
+/* Used in the About Me sections */
+
+.container {
+  display: flex;
+}
+
+/* About Me */
+
+.about-me {
+  display: flex;
+  align-items: center;
+}
+
+#about-me h1 {
+  font-size: 65px;
+  margin-top: 90px;
+  color: #464545;
+}
+
+#about-me p {
+  font-size: 25px;
+  color: rgb(128, 128, 128);
+  margin-top: -1cm;
+}
+
+.profile_image {
+  width: 400px;
+  height: fit-content;
+  margin-top: auto;
+  vertical-align: middle;
+  margin: 5px;
+}
+
+/* Skills */
+
+.all_skills {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.skill {
+  border: 1px solid gray;
+  display: block;
+  border-radius: 6px;
+  text-align: center;
+  margin: 50px;
+  padding: 10px;
+  width: 200px;
+  font-size: 20px;
+  box-shadow: 0 3px 10px gray;
+}
+
+.skill img {
+  height: 35px;
+  align-items: center;
+}
+
+.skills h6 {
+  align-items: center;
+  font-size: 20px;
+  margin-block-start: 8px;
+  margin-block-end: 5px;
+  font-weight: bold;
+}
+
+.skills p {
+  align-items: center;
+  font-size: 15px;
+  color: gray;
+  margin-block-start: 5px;
+  margin-block-end: 5px;
+}
+
+.flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Projects */
+
+.projects-container {
+  margin-top: 30px;
+  margin-left: 60px;
+}
+
+.projects-container hr {
+  border: 1px solid rgb(154, 169, 255);
+  width: 75%;
+  margin-left: 5cm;
+}
+
+.project-card {
+  margin: 0 15px 15px 30px;
+  padding-bottom: 5px;
+}
+
+.project-card h3 {
+  font-size: 25px;
+  margin-left: 30px;
+}
+
+.project-card li {
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+/* Recommendations */
+
+.all_recommendations {
+  display: flex;
+  align-items: center;
+  margin-left: 1in;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.recommendation {
+  font-style: italic;
+  text-align: left;
+  width: 21.875rem;
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid gray;
+  font-size: 18px;
+  height: 150px;
+}
+
+.recommendation span {
+  color: #6ba8d6;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Scroll to Top Button */
+
+.iconbutton {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  background-color: #6ba8d6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 3%;
+  bottom: 3%;
+  cursor: pointer;
+}
+
+/* Form Pop-up */
+
+.popup {
+  width: 400px;
+  background-color: #e2ecf5;
+  border-radius: 3mm;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  position: fixed;
+  visibility: hidden;
+}
+
+.popup img {
+  padding-top: 20px;
+}
+
+.popup button {
+  background-color: #fff;
+  border: 1px solid #838383;
+  color: #a0a0a0;
+  display: block;
+  border-radius: 6px;
+  text-align: center;
+  margin: 50px auto;
+  padding: 10px;
+  width: 200px;
+  font-size: 20px;
+}
+
+.popup button:hover {
+  background-color: #fff;
+  border: 2px solid #6ba8d6;
+  color: #6ba8d6;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+/* Recommendation Form */
+
+input,
+textarea {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 10px;
+  width: 100%;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  padding: 25px;
+  margin-left: 50px;
+  margin-right: 50px;
+  border: thin solid white;
+  width: 50%;
+}
+
+/* Buttons */
+
+button {
+  background-color: #fff;
+  border: 1px solid #b8b8b8;
+  color: #999999;
+  display: block;
+  border-radius: 6px;
+  text-align: center;
+  margin: 50px auto;
+  padding: 10px;
+  width: 200px;
+  font-size: 20px;
+}
+
+button:hover {
+  background-color: #6ba8d6;
+  border: 1px solid #6ba8d6;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Dark Mode Class (for manual toggle only) */
+
 body.dark-mode {
   background-color: #1e1e1e;
   color: #dddddd;
 }
 
-body.dark-mode #home {
-  background-color: #2e3b55;
-}
-
+body.dark-mode #home,
 body.dark-mode .profile_name {
   background-color: #2e3b55;
 }
@@ -70,82 +386,6 @@ body.dark-mode button:hover {
 body.dark-mode .skill {
   background-color: #2a2a2a;
   box-shadow: 0 3px 10px rgba(255, 255, 255, 0.05);
-}
-
-/* Optional: Fallback to auto dark mode if user prefers it */
-@media (prefers-color-scheme: dark) {
-  body:not(.dark-mode) {
-    background-color: #1e1e1e;
-    color: #dddddd;
-  }
-
-  body:not(.dark-mode) #home {
-    background-color: #2e3b55;
-  }
-
-  body:not(.dark-mode) .profile_name {
-    background-color: #2e3b55;
-  }
-
-  body:not(.dark-mode) .topmenu {
-    color: #cccccc;
-  }
-
-  body:not(.dark-mode) .topmenu:hover {
-    color: white;
-  }
-
-  body:not(.dark-mode) h2 {
-    color: #dddddd;
-  }
-
-  body:not(.dark-mode) .recommendation {
-    background-color: #2a2a2a;
-    border: 1px solid #555555;
-    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.05);
-  }
-
-  body:not(.dark-mode) .recommendation span {
-    color: #88c9ff;
-  }
-
-  body:not(.dark-mode) .iconbutton {
-    background-color: #88c9ff;
-  }
-
-  body:not(.dark-mode) .popup {
-    background-color: #333a45;
-    color: #eeeeee;
-  }
-
-  body:not(.dark-mode) .popup button {
-    background-color: #222222;
-    border: 1px solid #88c9ff;
-    color: #88c9ff;
-  }
-
-  body:not(.dark-mode) .popup button:hover {
-    background-color: #88c9ff;
-    border: 1px solid #88c9ff;
-    color: #222222;
-  }
-
-  body:not(.dark-mode) button {
-    background-color: #222222;
-    border: 1px solid #88c9ff;
-    color: #88c9ff;
-  }
-
-  body:not(.dark-mode) button:hover {
-    background-color: #88c9ff;
-    border: 1px solid #88c9ff;
-    color: #222222;
-  }
-
-  body:not(.dark-mode) .skill {
-    background-color: #2a2a2a;
-    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.05);
-  }
 }
 
 /* Theme Toggle Button */
