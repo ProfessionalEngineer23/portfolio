@@ -326,3 +326,14 @@ button:hover {
   text-align: center;
   cursor: pointer;
 }
+
+.project-card img {
+  width: 400px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+
