@@ -228,3 +228,21 @@ footer {
     color: #888;
     font-size: 14px;
 }
+
+.social-media-banners {
+    margin-bottom: 10px;
+}
+
+.social-media-banners a {
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 30px;
+    color: #888;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-media-banners a:hover {
+    color: #506a88;
+    transform: scale(1.2);
+}
+
