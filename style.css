@@ -1,14 +1,14 @@
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #f9f9f9; /* Light gray background for page */
+    color: #333; /* Dark gray text */
     line-height: 1.6;
     margin: 0;
     padding: 0;
 }
 
 #home {
-    background-color: #506a88;
+    background-color: #506a88; /* Blue-gray background for nav header */
     padding: 40px 20px;
     display: flex;
     justify-content: space-between;
@@ -18,7 +18,7 @@ body {
 
 .profile_name {
     font-size: 28px;
-    color: white;
+    color: white; /* White text for name */
 }
 
 .contact_info {
@@ -39,7 +39,7 @@ body {
 }
 
 .topmenu {
-    color: #f0f0f0;
+    color: #f0f0f0; /* Very light gray for menu links */
     margin: 10px;
     padding: 10px;
     font-size: 18px;
@@ -48,7 +48,7 @@ body {
 }
 
 .topmenu:hover {
-    color: white;
+    color: white; /* White text on hover */
     font-weight: bold;
     text-decoration: underline;
 }
@@ -61,12 +61,12 @@ body {
 
 #about-me h1 {
     font-size: 50px;
-    color: #444;
+    color: #444; /* Medium dark gray heading */
 }
 
 #about-me p {
     font-size: 20px;
-    color: #555;
+    color: #555; /* Slightly lighter gray for paragraph */
 }
 
 .profile_image {
@@ -77,9 +77,9 @@ body {
 
 h2 {
     font-size: 36px;
-    color: #444;
+    color: #444; /* Medium dark gray headings */
     margin: 40px 20px 20px;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid #ddd; /* Light gray border under headings */
     padding-bottom: 10px;
 }
 
@@ -91,9 +91,9 @@ h2 {
 }
 
 .skill {
-    background-color: white;
+    background-color: white; /* White skill cards */
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Light shadow */
     text-align: center;
     margin: 20px;
     padding: 20px;
@@ -115,9 +115,9 @@ h2 {
 }
 
 .project-card {
-    background-color: white;
+    background-color: white; /* White project cards */
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Light shadow */
     margin: 20px;
     padding: 20px;
     transition: transform 0.2s;
@@ -127,23 +127,54 @@ h2 {
     transform: translateY(-5px);
 }
 
-.project-card img {
+.project-link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit; /* Inherit text color */
+}
+
+.project-link img {
     width: 100%;
     max-width: 600px;
     height: 300px;
     object-fit: cover;
     border-radius: 8px;
+    transition: opacity 0.3s ease;
+    display: block;
     margin-top: 15px;
     margin-bottom: 10px;
-    display: block;
 }
 
+.project-link .hover-text {
+    visibility: hidden;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black for hover text background */
+    color: white; /* White hover text */
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.project-link:hover img {
+    opacity: 0.7; /* Dim image on hover */
+}
+
+.project-link:hover .hover-text {
+    visibility: visible;
+    opacity: 1;
+}
 
 .recommendation {
     font-style: italic;
-    background-color: white;
+    background-color: white; /* White background for recommendations */
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Light shadow */
     margin: 15px;
     padding: 20px;
     font-size: 17px;
@@ -161,10 +192,10 @@ fieldset {
     margin: 20px auto;
     padding: 20px;
     width: 50%;
-    border: 1px solid #ddd;
+    border: 1px solid #ddd; /* Light gray border */
     border-radius: 12px;
-    background-color: #fff;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    background-color: #fff; /* White background for form */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Very light shadow */
 }
 
 input, textarea {
@@ -172,13 +203,13 @@ input, textarea {
     width: 100%;
     margin: 10px 0;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #ccc; /* Light gray border */
     border-radius: 6px;
 }
 
 button {
-    background-color: #506a88;
-    color: white;
+    background-color: #506a88; /* Blue-gray button background */
+    color: white; /* White button text */
     border: none;
     padding: 10px 20px;
     border-radius: 6px;
@@ -188,14 +219,14 @@ button {
 }
 
 button:hover {
-    background-color: #3f5673;
+    background-color: #3f5673; /* Darker blue-gray on hover */
 }
 
 .iconbutton {
     width: 50px;
     height: 50px;
     border-radius: 100%;
-    background-color: #506a88;
+    background-color: #506a88; /* Blue-gray for scroll-to-top button */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -207,7 +238,7 @@ button:hover {
 
 .popup {
     width: 400px;
-    background-color: #bcf0d6;
+    background-color: #bcf0d6; /* Light greenish success background */
     border-radius: 12px;
     position: fixed;
     top: 50%;
@@ -225,7 +256,7 @@ button:hover {
 footer {
     text-align: center;
     padding: 20px;
-    color: #888;
+    color: #888; /* Light gray footer text */
     font-size: 14px;
 }
 
@@ -237,12 +268,11 @@ footer {
     text-decoration: none;
     margin: 0 10px;
     font-size: 30px;
-    color: #888;
+    color: #888; /* Light gray icons */
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-media-banners a:hover {
-    color: #506a88;
+    color: #506a88; /* Blue-gray on hover */
     transform: scale(1.2);
 }
-
