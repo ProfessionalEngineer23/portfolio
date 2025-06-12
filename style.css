@@ -121,6 +121,7 @@ h2 {
     margin: 20px;
     padding: 20px;
     transition: transform 0.2s;
+    text-align: center; /* Center project link inside */
 }
 
 .project-card:hover {
@@ -128,26 +129,22 @@ h2 {
 }
 
 .project-link {
-    position: relative;
-    display: inline-block;
-    text-decoration: none;
-    color: inherit; /* Inherit text color */
+    display: block; /* Force block so images are consistent */
+    width: 600px; /* Fixed width */
+    margin: 0 auto; /* Center horizontally */
+    position: relative; /* For hover text */
 }
 
 .project-link img {
-    width: 600px;          /* fixed width */
-    height: 340px;         /* fixed height */
-    object-fit: cover;     /* crop image nicely */
+    width: 600px; /* Fixed width */
+    height: 340px; /* Fixed height */
+    object-fit: cover; /* Crop nicely */
     border-radius: 8px;
     transition: opacity 0.3s ease;
     display: block;
     margin-top: 15px;
     margin-bottom: 10px;
-    margin-left: auto;     /* center horizontally */
-    margin-right: auto;
 }
-
-
 
 .project-link .hover-text {
     visibility: hidden;
@@ -155,7 +152,7 @@ h2 {
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black for hover text background */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
     color: white; /* White hover text */
     padding: 5px 10px;
     border-radius: 4px;
