@@ -135,16 +135,18 @@ h2 {
 }
 
 .project-link img {
-    width: 100%;
-    max-width: 600px;
-    height: 340px; /* consistent fixed height */
-    object-fit: cover; /* crop to fit box nicely */
+    width: 600px;          /* fixed width */
+    height: 340px;         /* fixed height */
+    object-fit: cover;     /* crop image nicely */
     border-radius: 8px;
     transition: opacity 0.3s ease;
     display: block;
     margin-top: 15px;
     margin-bottom: 10px;
+    margin-left: auto;     /* center horizontally */
+    margin-right: auto;
 }
+
 
 
 .project-link .hover-text {
