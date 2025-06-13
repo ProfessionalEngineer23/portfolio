@@ -170,6 +170,16 @@ h2 {
     opacity: 1;
 }
 
+.project-description {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 10px;
+    text-align: left;
+    padding: 0 10px;
+}
+
+
 .recommendation {
     font-style: italic;
     background-color: white; /* White background for recommendations */
@@ -275,4 +285,10 @@ footer {
 .social-media-banners a:hover {
     color: #506a88; /* Blue-gray on hover */
     transform: scale(1.2);
+}
+
+#visits {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold; /* Optional → make the number stand out */
+    color: #444;
 }
