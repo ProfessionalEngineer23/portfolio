@@ -26,3 +26,19 @@ function showPopup(bool) {
     document.getElementById('popup').style.visibility = 'hidden'
   }
 }
+
+fetch('https://viewcounter-9336b-default-rtdb.europe-west1.firebasedatabase.app/views.json')
+  .then(response => response.json())
+  .then(data => {
+    let count = data.count || 0;
+    document.querySelector("#visits").textContent = count;
+
+    // Increment the count
+    fetch('https://viewcounter-9336b-default-rtdb.europe-west1.firebasedatabase.app/views.json', {
+      method: 'PATCH',
+      body: JSON.stringify({ count: count + 1 }),
+      headers: { 'Content-Type': 'application/json' }
+    });
+  });
+
+
