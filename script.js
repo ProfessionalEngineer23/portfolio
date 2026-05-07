@@ -138,11 +138,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Existing visit counter using your old Firebase database
 fetch("https://viewcounter-9336b-default-rtdb.europe-west1.firebasedatabase.app/views.json")
   .then(response => response.json())
   .then(data => {
-    let count = data.count || 0;
+    const viewsData = data || {};
+    const count = viewsData.count || 0;
 
     const visitsElement = document.querySelector("#visits");
 
@@ -150,7 +150,7 @@ fetch("https://viewcounter-9336b-default-rtdb.europe-west1.firebasedatabase.app/
       visitsElement.textContent = count;
     }
 
-    fetch("https://viewcounter-9336b-default-rtdb.europe-west1.firebasedatabase.app/views.json", {
+    return fetch("https://viewcounter-9336b-default-rtdb.europe-west1.firebasedatabase.app/views.json", {
       method: "PATCH",
       body: JSON.stringify({ count: count + 1 }),
       headers: {
