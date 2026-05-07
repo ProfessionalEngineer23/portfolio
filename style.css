@@ -126,6 +126,10 @@ h2 {
   text-align: center;
 }
 
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
 .project-link {
   display: block;
   width: 100%;
@@ -142,6 +146,13 @@ h2 {
   margin: 15px auto 10px auto;
 }
 
+.hover-text {
+  display: inline-block;
+  margin-top: 5px;
+  color: #506a88;
+  font-weight: 600;
+}
+
 .project-description {
   font-size: 16px;
   color: #555;
@@ -149,17 +160,12 @@ h2 {
   margin-top: 10px;
   text-align: left;
 }
-/*Resizing For Mobile*/
-@media (max-width: 1000px) {
-  .projects-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
-@media (max-width: 650px) {
-  .projects-container {
-    grid-template-columns: 1fr;
-  }
+.all_recommendations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
 }
 
 .recommendation {
@@ -172,12 +178,30 @@ h2 {
   font-size: 17px;
   line-height: 1.5;
   width: 300px;
+  word-wrap: break-word;
 }
 
-.all_recommendations {
+.recommendation p {
+  margin-top: 0;
+}
+
+.recommendation strong {
+  display: block;
+  margin-top: 10px;
+  color: #506a88;
+  font-style: normal;
+}
+
+#no_recommendations_message {
+  color: #666;
+  font-size: 18px;
+  text-align: center;
+}
+
+.flex_center {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 
 fieldset {
@@ -190,13 +214,26 @@ fieldset {
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-input, textarea {
+input,
+textarea {
   font-family: 'Inter', sans-serif;
   width: 100%;
   margin: 10px 0;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+#recommendation_counter {
+  font-size: 14px;
+  color: #777;
+  text-align: right;
+  margin-top: -5px;
 }
 
 button {
@@ -239,6 +276,8 @@ button:hover {
   text-align: center;
   padding: 30px;
   visibility: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  z-index: 1000;
 }
 
 .popup img {
@@ -273,4 +312,54 @@ footer {
   font-family: 'Inter', sans-serif;
   font-weight: bold;
   color: #444;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  fieldset {
+    width: 70%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .profile_image {
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: 220px;
+  }
+
+  #about-me h1 {
+    font-size: 34px;
+  }
+
+  #about-me p {
+    font-size: 17px;
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+
+  .project-link img {
+    width: 80%;
+  }
+
+  fieldset {
+    width: 85%;
+  }
+
+  .popup {
+    width: 80%;
+  }
 }

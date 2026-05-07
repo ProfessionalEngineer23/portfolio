@@ -3,11 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <title>Niki Mardari - Portfolio</title>
+
   <link rel="stylesheet" href="./style.css"/>
-  <script src="./script.js" defer></script>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Firebase SDK - Compat Version -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-database-compat.js"></script>
+
+  <!-- Your JavaScript -->
+  <script src="./script.js" defer></script>
 </head>
+
 <body>
 
 <!-- Navigation Bar -->
@@ -15,15 +24,18 @@
   <div id="home">
     <div class="profile_name">
       Niki Mardari
+
       <div class="contact_info">
         <img src="html_finalprojimages/envelope.png" alt="email" />
         nikitamardari@gmail.com
       </div>
+
       <div class="contact_info">
         <img src="html_finalprojimages/phone.png" alt="phone" />
         0876695162
       </div>
     </div>
+
     <div class="topdiv">
       <a class="topmenu" href="#about-me">About Me</a>
       <a class="topmenu" href="#skills">Skills</a>
@@ -36,13 +48,27 @@
 <!-- About Me -->
 <section id="about-me" class="container">
   <div>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUpLDwqtj2rhNcQOUst88KzYf-sxPf_23hqTCizVk4ETnv6D39JZs2eZ4blQNjIzxED3o&usqp=CAU" class="profile_image"/>
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUpLDwqtj2rhNcQOUst88KzYf-sxPf_23hqTCizVk4ETnv6D39JZs2eZ4blQNjIzxED3o&usqp=CAU"
+      class="profile_image"
+      alt="Profile image"
+    />
   </div>
+
   <div>
-    <h1>Hi, I'm Niki Mardari! <img src="html_finalprojimages/waving-hand.png" width="50px"/></h1>
+    <h1>
+      Hi, I'm Niki Mardari!
+      <img src="html_finalprojimages/waving-hand.png" width="50px" alt="Waving hand"/>
+    </h1>
+
     <p>
-      I am a 3rd year Computer Engineering student focused on designing practical systems that combine software and hardware. I enjoy working on hands-on projects, from embedded systems to web applications, and constantly explore new technologies.<br>
-      Check out some of my projects below and on <a href="https://www.linkedin.com/in/niki-mardari-5909941a4/" target="_blank">LinkedIn</a> and <a href="https://github.com/ProfessionalEngineer23?tab=repositories" target="_blank">GitHub</a>.
+      I am a 3rd year Computer Engineering student focused on designing practical systems that combine software and hardware.
+      I enjoy working on hands-on projects, from embedded systems to web applications, and constantly explore new technologies.
+      <br>
+      Check out some of my projects below and on
+      <a href="https://www.linkedin.com/in/niki-mardari-5909941a4/" target="_blank">LinkedIn</a>
+      and
+      <a href="https://github.com/ProfessionalEngineer23?tab=repositories" target="_blank">GitHub</a>.
     </p>
   </div>
 </section>
@@ -50,29 +76,34 @@
 <!-- Skills -->
 <section id="skills">
   <h2>Skills</h2>
+
   <div class="all_skills">
     <div class="skill">
-      <img src="html_finalprojimages/html5.png"/>
+      <img src="html_finalprojimages/html5.png" alt="HTML logo"/>
       <h6>HTML</h6>
       <p>1 year experience</p>
     </div>
+
     <div class="skill">
-      <img src="html_finalprojimages/js.jpeg"/>
+      <img src="html_finalprojimages/js.jpeg" alt="JavaScript logo"/>
       <h6>JavaScript</h6>
       <p>1 year experience</p>
     </div>
+
     <div class="skill">
-      <img src="html_finalprojimages/cpp.png"/>
+      <img src="html_finalprojimages/cpp.png" alt="C++ logo"/>
       <h6>C++</h6>
       <p>2 years experience</p>
     </div>
+
     <div class="skill">
-      <img src="html_finalprojimages/c.png"/>
+      <img src="html_finalprojimages/c.png" alt="C logo"/>
       <h6>C</h6>
       <p>2 years experience</p>
     </div>
+
     <div class="skill">
-      <img src="html_finalprojimages/python.png"/>
+      <img src="html_finalprojimages/python.png" alt="Python logo"/>
       <h6>Python</h6>
       <p>1 year experience</p>
     </div>
@@ -81,80 +112,93 @@
 
 <!-- Projects -->
 <section id="projects" class="projects">
-  <h2>Projects</h2><br>
+  <h2>Projects</h2>
+
   <div class="projects-container">
 
     <div class="project-card">
       <h3>Greenhouse Hub</h3>
+
       <a href="https://www.youtube.com/playlist?list=PLw1CliiFCSWNNFSFAg9YIj1HqUXdAepGj" target="_blank" class="project-link">
         <img src="html_finalprojimages/Hub.jpg" alt="Greenhouse Project">
         <span class="hover-text">Click to view demos</span>
       </a>
+
       <div class="project-description">
-        Greenhouse Hub with sensors, fan control, ThingSpeak integration, and AI prediction dashboard. Implemented using Arduino, Python, JavaScript, and HTML.
+        Greenhouse Hub with sensors, fan control, ThingSpeak integration, and AI prediction dashboard.
+        Implemented using Arduino, Python, JavaScript, and HTML.
       </div>
     </div>
 
     <div class="project-card">
       <h3>Autonomous Robot Car</h3>
+
       <a href="https://youtube.com/shorts/MYuRv3px1k4?feature=share" target="_blank" class="project-link">
         <img src="html_finalprojimages/Bot.jpg" alt="Robot Smart Car">
         <span class="hover-text">Click to view demo</span>
       </a>
+
       <div class="project-description">
-        Smart Remote-Control Arduino Robot with mobile control, buzzer, lights, sensors, and autonomous capabilities. Programmed using C.
+        Smart Remote-Control Arduino Robot with mobile control, buzzer, lights, sensors, and autonomous capabilities.
+        Programmed using C.
       </div>
     </div>
 
     <div class="project-card">
       <h3>Website for Smart Home Monitoring</h3>
+
       <a href="https://github.com/ProfessionalEngineer23/SMM-Dashboard" target="_blank" class="project-link">
         <img src="html_finalprojimages/smm.png" alt="Smart Home Website">
         <span class="hover-text">Click for more details</span>
       </a>
+
       <div class="project-description">
-        Created a styled single-page website for a smart home monitoring system using HTML, CSS, and JavaScript (with graphs).
+        Created a styled single-page website for a smart home monitoring system using HTML, CSS, and JavaScript with graphs.
       </div>
     </div>
 
     <div class="project-card">
       <h3>Smart Home Panel</h3>
+
       <a href="https://youtu.be/KLaoUrMFGpg?si=OJY8CrJOt46wcD_X" target="_blank" class="project-link">
         <img src="html_finalprojimages/Smart_Panel.jpg" alt="Smart Home Panel">
         <span class="hover-text">Click to view vlog</span>
       </a>
+
       <div class="project-description">
-
-    Developed an ESP32-based smart home control panel with a touchscreen interface
-    for real-time environmental monitoring and smart device control. The system
-    integrates temperature, humidity, pressure, light, air quality, and presence
-    sensors, sending data to ThingsBoard over MQTT while supporting automation
-    through connected smart devices.
-    Built using Espressif ESP32 microcontrollers, ESP-IDF, Arduino Framework,
-    Embedded C/C++, LVGL, MQTT, ThingsBoard, Wi-Fi, sensors, and actuators.
-
-    </div>
-    </div>
-
-    <div class="project-card">
-      <h3>Web Ping Pong</h3>
-      <a href="https://high-score-counter.web.app" target="_blank" class="project-link">
-        <img src="html_finalprojimages/pingpong.png" alt="Pong Game Screenshot">
-        <span class="hover-text">Play Online</span>
-      </a>
-      <div class="project-description">
-        A Firebase-hosted Pong game featuring difficulty settings, sound toggle, leaderboard, high score tracker, and dark/light mode. Built with HTML, CSS, JavaScript, and Firebase Realtime Database.
+        Developed an ESP32-based smart home control panel with a touchscreen interface for real-time environmental monitoring
+        and smart device control. The system integrates temperature, humidity, pressure, light, air quality, and presence sensors,
+        sending data to ThingsBoard over MQTT while supporting automation through connected smart devices.
       </div>
     </div>
 
     <div class="project-card">
-      <h3>Questino.io Ai Survey Platform</h3>
+      <h3>Web Ping Pong</h3>
+
+      <a href="https://high-score-counter.web.app" target="_blank" class="project-link">
+        <img src="html_finalprojimages/pingpong.png" alt="Pong Game Screenshot">
+        <span class="hover-text">Play Online</span>
+      </a>
+
+      <div class="project-description">
+        A Firebase-hosted Pong game featuring difficulty settings, sound toggle, leaderboard, high score tracker, and dark/light mode.
+        Built with HTML, CSS, JavaScript, and Firebase Realtime Database.
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h3>Questino.io AI Survey Platform</h3>
+
       <a href="https://questino-io.appwrite.network/" target="_blank" class="project-link">
         <img src="html_finalprojimages/Questino.png" alt="Questino.io survey screenshot">
         <span class="hover-text">Try it out!</span>
       </a>
+
       <div class="project-description">
-        Questino.io is an AI-powered survey platform focused on wellbeing, engagement, and emotional insight. It combines modern web technologies with NLP-based emotion analysis to transform survey responses into actionable insights. Designed for education and workplace environments, the platform supports conversational surveys, accessibility features, real-time analytics dashboards, and data export for decision-making. Built with: React, Node.js, Appwrite, IBM Watson NLP.
+        Questino.io is an AI-powered survey platform focused on wellbeing, engagement, and emotional insight.
+        It combines modern web technologies with NLP-based emotion analysis to transform survey responses into actionable insights.
+        Built with React, Node.js, Appwrite, and IBM Watson NLP.
+      </div>
     </div>
 
   </div>
@@ -163,8 +207,10 @@
 <!-- Recommendations -->
 <section id="recommendations">
   <h2>Recommendations</h2>
-  <div class="all_recommendations" id="all_recommendations">
 
+  <div class="all_recommendations" id="all_recommendations">
+    <p id="no_recommendations_message">No recommendations yet. Be the first to leave one!</p>
+  </div>
 </section>
 
 <!-- Recommendation Form -->
@@ -172,8 +218,24 @@
   <div class="flex_center">
     <fieldset>
       <legend class="introduction">Leave a Recommendation</legend>
-      <input type="text" placeholder="Name (Optional)"> <br/>
-      <textarea id="new_recommendation" cols="500" rows="10" placeholder="Message"></textarea>
+
+      <input
+        type="text"
+        id="recommendation_name"
+        maxlength="40"
+        placeholder="Name (Optional)"
+      >
+
+      <textarea
+        id="new_recommendation"
+        maxlength="500"
+        cols="500"
+        rows="10"
+        placeholder="Message"
+      ></textarea>
+
+      <p id="recommendation_counter">0 / 500 characters</p>
+
       <div class="flex_center">
         <button id="recommend_btn" onclick="addRecommendation()">Submit</button>
       </div>
@@ -192,7 +254,7 @@
 
 <!-- Pop-up -->
 <div class="popup flex_center" id="popup">
-  <img src="html_finalprojimages/checkmark--outline.svg"/>
+  <img src="html_finalprojimages/checkmark--outline.svg" alt="Checkmark"/>
   <h3>Your recommendation has been submitted!</h3>
   <button onclick="showPopup(false)">Ok</button>
 </div>
@@ -200,13 +262,17 @@
 <!-- Footer -->
 <footer>
   <h1 class="visits">This site has been visited <span id="visits"></span> times.</h1>
+
   <div class="social-media-banners">
     <a href="https://www.instagram.com/nick23019/" target="_blank" class="fa fa-instagram"></a>
     <a href="https://www.youtube.com/@Pengui23" target="_blank" class="fa fa-youtube"></a>
     <a href="https://www.snapchat.com/add/yourusername" target="_blank" class="fa fa-snapchat-ghost"></a>
   </div>
+
   <div style="margin-top: 10px;">
-    © 2025 Niki Mardari | <a href="mailto:nikitamardari@gmail.com">nikitamardari@gmail.com</a> | <a href="https://www.linkedin.com/in/niki-mardari-5909941a4/" target="_blank">LinkedIn</a>
+    © 2025 Niki Mardari |
+    <a href="mailto:nikitamardari@gmail.com">nikitamardari@gmail.com</a> |
+    <a href="https://www.linkedin.com/in/niki-mardari-5909941a4/" target="_blank">LinkedIn</a>
   </div>
 </footer>
 
