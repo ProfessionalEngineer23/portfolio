@@ -1,22 +1,12 @@
-// Firebase configuration for the Recommendations project
-const firebaseConfig = {
-  apiKey: "AIzaSyC4gPN-nDizO7SlGfQ2GkqdJiTBNrHiBqQ",
-  authDomain: "recommendations-8e9a9.firebaseapp.com",
-  databaseURL: "https://recommendations-8e9a9-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "recommendations-8e9a9",
-  storageBucket: "recommendations-8e9a9.firebasestorage.app",
-  messagingSenderId: "153993280977",
-  appId: "1:153993280977:web:302a930a8556f9921f74f0"
-};
-
-// Start Firebase using the compat SDK
+// Start Firebase using the compat SDK.
+// firebaseConfig comes from config.js.
 firebase.initializeApp(firebaseConfig);
 
-// Connect to Firebase Realtime Database
+// Connect to Firebase Realtime Database.
 const database = firebase.database();
 const recommendationsRef = database.ref("recommendations");
 
-// Save a recommendation to Firebase
+// Save a recommendation to Firebase.
 function addRecommendation() {
   const nameInput = document.getElementById("recommendation_name");
   const recommendationInput = document.getElementById("new_recommendation");
@@ -54,7 +44,7 @@ function addRecommendation() {
   });
 }
 
-// Display one recommendation card on the page
+// Display one recommendation card on the page.
 function displayRecommendation(name, message) {
   const element = document.createElement("div");
   element.className = "recommendation";
@@ -71,7 +61,7 @@ function displayRecommendation(name, message) {
   document.getElementById("all_recommendations").appendChild(element);
 }
 
-// Load all recommendations from Firebase
+// Load all recommendations from Firebase.
 recommendationsRef.on("value", (snapshot) => {
   const recommendationsContainer = document.getElementById("all_recommendations");
 
@@ -95,7 +85,6 @@ recommendationsRef.on("value", (snapshot) => {
     recommendations.push(childSnapshot.val());
   });
 
-  // Newest recommendations appear first
   recommendations.sort((a, b) => b.createdAt - a.createdAt);
 
   recommendations.forEach((recommendation) => {
@@ -103,7 +92,7 @@ recommendationsRef.on("value", (snapshot) => {
   });
 });
 
-// Show or hide the confirmation popup
+// Show or hide the confirmation popup.
 function showPopup(bool) {
   const popup = document.getElementById("popup");
 
@@ -118,7 +107,7 @@ function showPopup(bool) {
   }
 }
 
-// Update the recommendation character counter
+// Update the recommendation character counter.
 function updateCharacterCounter() {
   const recommendationInput = document.getElementById("new_recommendation");
   const counter = document.getElementById("recommendation_counter");
@@ -128,7 +117,7 @@ function updateCharacterCounter() {
   }
 }
 
-// Connect textarea to character counter after the page loads
+// Connect textarea to character counter after the page loads.
 document.addEventListener("DOMContentLoaded", () => {
   const recommendationInput = document.getElementById("new_recommendation");
 
@@ -138,7 +127,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-fetch("https://viewcounter-9336b-default-rtdb.europe-west1.firebasedatabase.app/views.json")
+// Existing visit counter.
+// viewCounterUrl comes from config.js.
+fetch(viewCounterUrl)
   .then(response => response.json())
   .then(data => {
     const viewsData = data || {};
@@ -150,7 +141,7 @@ fetch("https://viewcounter-9336b-default-rtdb.europe-west1.firebasedatabase.app/
       visitsElement.textContent = count;
     }
 
-    return fetch("https://viewcounter-9336b-default-rtdb.europe-west1.firebasedatabase.app/views.json", {
+    return fetch(viewCounterUrl, {
       method: "PATCH",
       body: JSON.stringify({ count: count + 1 }),
       headers: {
