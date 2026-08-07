@@ -387,7 +387,7 @@ footer {
       margin: 0 auto;
     }
 
-    .coming-soon-card {
+    .blog-card {
       max-width: 700px;
       margin: 40px auto 0;
       padding: 40px;
@@ -397,12 +397,12 @@ footer {
       background: white;
     }
 
-    .coming-soon-card h2 {
+    .blog-card h2 {
       font-size: 32px;
       margin-bottom: 10px;
     }
 
-    .coming-soon-card p {
+    .blog-card p {
       font-size: 18px;
       line-height: 1.6;
     }
