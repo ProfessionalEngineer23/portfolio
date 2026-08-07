@@ -363,3 +363,46 @@ footer {
     width: 80%;
   }
 }
+
+    .blog-page {
+      padding: 40px;
+      min-height: 55vh;
+    }
+
+    .blog-hero {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .blog-hero h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .blog-hero p {
+      font-size: 20px;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .coming-soon-card {
+      max-width: 700px;
+      margin: 40px auto 0;
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 3px 10px gray;
+      background: white;
+    }
+
+    .coming-soon-card h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .coming-soon-card p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
