@@ -126,9 +126,8 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCharacterCounter();
   }
 });
+const countedKey = "portfolio_counted_this_session"; // Session flag to mark a visit as counted
 
-// Existing visit counter.
-// viewCounterUrl comes from config.js.
 fetch(viewCounterUrl)
   .then(response => response.json())
   .then(data => {
@@ -137,17 +136,28 @@ fetch(viewCounterUrl)
 
     const visitsElement = document.querySelector("#visits");
 
+    // Only count when the sessionStorage flag is not set
+    if (!sessionStorage.getItem(countedKey)) {
+      sessionStorage.setItem(countedKey, "true");
+
+      const newCount = count + 1;
+
+      if (visitsElement) {
+        visitsElement.textContent = newCount;
+      }
+
+      return fetch(viewCounterUrl, {
+        method: "PATCH",
+        body: JSON.stringify({ count: newCount }),
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
+    }
+
     if (visitsElement) {
       visitsElement.textContent = count;
     }
-
-    return fetch(viewCounterUrl, {
-      method: "PATCH",
-      body: JSON.stringify({ count: count + 1 }),
-      headers: {
-        "Content-Type": "application/json"
-      }
-    });
   })
   .catch((error) => {
     console.error("Error updating visit counter:", error);
